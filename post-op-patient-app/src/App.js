@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
 import './App.css';
 import Patient from "./components/Patient/Patient.js";
-import Home from "./components/Home.js";
+import Home from "./components/Login/Home.js";
 
 function App(props) {
   return (
@@ -21,7 +21,6 @@ function App(props) {
         </Route>
       </Switch>
       </Router>
-      <footer>Copyright 2020 Lam_Da_Boiz Hacklahoma2020</footer>
     </main>
   );
 }
