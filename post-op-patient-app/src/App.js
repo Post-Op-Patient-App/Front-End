@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import {BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
 import './App.css';
+import Patient from "./components/Patient/Patient.js";
+import Home from "./components/Home.js";
 
-function App() {
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+    <Router>
+      <div className="nav-tabs">
+        <Link className="links" to="/">Log In</Link>
+        <Link className="links" to="/patient/">Patient Info</Link>
+      </div>
+      <Switch>
+        <Route path={`/patient/`}>
+          <Patient id={props.id}/>
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+      </Router>
+      <footer>Copyright 2020 Lam_Da_Boiz Hacklahoma2020</footer>
+    </main>
   );
 }
 
