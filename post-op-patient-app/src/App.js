@@ -7,7 +7,7 @@ import Home from "./components/Login/Home.js";
 function App(props) {
   return (
     <main>
-    <Router>
+    <Router class="container">
       <div className="nav-tabs">
         <Link className="links" to="/">Log In</Link>
         <Link className="links" to="/patient/">Patient Info</Link>
