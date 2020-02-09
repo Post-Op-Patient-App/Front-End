@@ -10,10 +10,10 @@ function App(props) {
     <Router>
       <div className="nav-tabs">
         <Link className="links" to="/">Log In</Link>
-        <Link className="links" to="/patient">Patient Info</Link>
+        <Link className="links" to="/patient/">Patient Info</Link>
       </div>
       <Switch>
-        <Route path={`/patient/:${props.id}`}>
+        <Route path={`/patient/`}>
           <Patient id={props.id}/>
         </Route>
         <Route path="/">
@@ -21,6 +21,7 @@ function App(props) {
         </Route>
       </Switch>
       </Router>
+      <footer>Copyright 2020 Lam_Da_Boiz Hacklahoma2020</footer>
     </main>
   );
 }

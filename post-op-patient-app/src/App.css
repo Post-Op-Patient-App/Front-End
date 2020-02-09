@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+.login{
+  width: 70%;
+  margin-left: 15%;
+}
+footer{
+  position: absolute;
+  bottom: 10px;
+}
+.login-form{
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+}
+.login Button{
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 15%;
+}
