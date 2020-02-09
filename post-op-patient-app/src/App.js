@@ -10,6 +10,7 @@ function App(props) {
     <Router>
       <div className="nav-tabs">
         <Link className="links" to="/">Log In</Link>
+        <Link className="links" to="/patient">Patient Info</Link>
       </div>
       <Switch>
         <Route path={`/patient/:${props.id}`}>

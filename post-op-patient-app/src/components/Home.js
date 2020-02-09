@@ -1,5 +1,5 @@
 import React from "react";
-import Formik from "formik";
+import { withFormik } from "formik";
 import { Button, Form, FormGroup, Label, Input, Card, CardHeader } from 'reactstrap';
 
 function Home(){
@@ -14,8 +14,8 @@ function Home(){
         <Input type="email" name="email" id="exampleEmail" placeholder="something@idk.cool" />
       </FormGroup>
       <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-        <Label for="examplePassword" className="mr-sm-2">Password</Label>
-        <Input type="password" name="password" id="examplePassword" placeholder="don't tell!" />
+        <Label for="password" className="mr-sm-2">Password</Label>
+        <Input type="password" name="password" id="password" placeholder="don't tell!" />
       </FormGroup>
       <Button>Submit</Button>
     </Form>
@@ -23,4 +23,9 @@ function Home(){
     </div>
   )
 }
+
+const FormikHome = withFormik({
+
+})(Home);
+
 export default Home;
