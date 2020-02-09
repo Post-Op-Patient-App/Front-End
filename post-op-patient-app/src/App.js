@@ -15,10 +15,15 @@ function App(props) {
       <div className="nav-tabs">
         <Link className="links" to="/">Log In</Link>
         <Link className="links" to="/patient/">Patient Info</Link>
+        {/*to be removed*/}
+        <Link className="links" to="/nurse/">Nurse Info</Link>
       </div>
       <Switch>
         <Route path={`/patient/`}>
           <Patient id={props.id}/>
+        </Route>
+        <Route path={`/nurse/`}>
+          <Nurse />
         </Route>
         <Route path="/">
           <Home />

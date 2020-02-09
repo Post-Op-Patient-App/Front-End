@@ -16,7 +16,7 @@ import {
 } from 'reactstrap';
 
 
-function Patient() {
+function Patient(props) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggle = () => setDropdownOpen(prevState => !prevState);
@@ -29,7 +29,7 @@ function Patient() {
         <Card>
           <CardTitle>L-CORE</CardTitle>
           <CardText>Internal Temp</CardText>
-          <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+          <Dropdown group isOpen={dropdownOpen} toggle={toggle}>
           {/*This does run a bug that allows all 3 to open at the same time but
             it can be solved later!
             */}
@@ -54,7 +54,7 @@ function Patient() {
         <Card>
           <CardTitle>L-SURF</CardTitle>
           <CardText>Surface Temp</CardText>
-          <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+          <Dropdown group isOpen={dropdownOpen} toggle={toggle}>
       <DropdownToggle caret>
         Select Temp Range
         </DropdownToggle>
@@ -76,7 +76,7 @@ function Patient() {
         <Card>
           <CardTitle>L-O2</CardTitle>
           <CardText>Oxygen Saturation</CardText>
-          <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+          <Dropdown group isOpen={dropdownOpen} toggle={toggle}>
       <DropdownToggle caret>
         Select Saturation Range
         </DropdownToggle>
@@ -99,7 +99,7 @@ function Patient() {
         <Card>
           <CardTitle>L-BP</CardTitle>
           <CardText>Prev Blood Pressure</CardText>
-          <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+          <Dropdown group isOpen={dropdownOpen} toggle={toggle}>
       <DropdownToggle caret>
         Select BP Range
         </DropdownToggle>
@@ -115,7 +115,7 @@ function Patient() {
         <Card>
           <CardTitle>SURF-STBL</CardTitle>
           <CardText>Stability of Surface Temp</CardText>
-          <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+          <Dropdown group isOpen={dropdownOpen} toggle={toggle}>
       <DropdownToggle caret>
         Select
         </DropdownToggle>
@@ -131,7 +131,7 @@ function Patient() {
         <Card>
           <CardTitle>CORE-STBL</CardTitle>
           <CardText>Core Temp Stability</CardText>
-          <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+          <Dropdown group isOpen={dropdownOpen} toggle={toggle}>
       <DropdownToggle caret>
         Select
         </DropdownToggle>
