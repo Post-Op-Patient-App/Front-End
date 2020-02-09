@@ -1,7 +1,7 @@
 import React from "react";
 import { withFormik } from "formik";
 import { Button, Form, FormGroup, Label, Input, Card, CardHeader } from 'reactstrap';
-import './register.scss'
+
 
 function Register(){
   return (
