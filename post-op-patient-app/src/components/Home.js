@@ -1,21 +1,22 @@
 import React from "react";
 import { withFormik } from "formik";
-import { Button, Form, FormGroup, Label, Input, Card, CardHeader } from 'reactstrap';
-
+import { Button, Form, FormGroup, Input, Card, CardHeader } from 'reactstrap';
+import * as Yup from "yup";
 
 function Home(){
+
+
   return (
     <div className="home">
-      <h1>This is the home page and it will have a log in form here</h1>
       <Card className="login">
       <CardHeader>Log In</CardHeader>
       <Form inline className="login-form">
       <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-        <Label for="exampleEmail" className="mr-sm-2">Email</Label>
+        <label for="exampleEmail" className="mr-sm-2">Email</label>
         <Input type="email" name="email" id="exampleEmail" placeholder="something@idk.cool" />
       </FormGroup>
       <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-        <Label for="password" className="mr-sm-2">Password</Label>
+        <label for="password" className="mr-sm-2">Password</label>
         <Input type="password" name="password" id="password" placeholder="don't tell!" />
       </FormGroup>
       <Button>Submit</Button>
@@ -26,6 +27,16 @@ function Home(){
 }
 
 const FormikHome = withFormik({
+  mapPropsToValues({email, password}){
+    return{
+      email: email || "",
+      password: password || "",
+    };
+  },
+  validationSchema: Yup.object().shape({
+    email: Yup.string().required(),
+    password: Yup.string().required()
+  }),
 
 })(Home);
 

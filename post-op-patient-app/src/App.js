@@ -3,10 +3,14 @@ import {BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
 import './App.css';
 import Patient from "./components/Patient/Patient.js";
 import Home from "./components/Home.js";
+import Nurse from "./components/Nurse/Nurse.js";
 
 function App(props) {
   return (
     <main>
+    <header>
+    <h1>Post-Op Friend!</h1>
+    </header>
     <Router>
       <div className="nav-tabs">
         <Link className="links" to="/">Log In</Link>
