@@ -1,10 +1,21 @@
-.App {
-  text-align: center;
+
+.nav-tabs {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.links {
+  margin-right: 15px;
+}
+
+.nav-tabs a {
+  color: black;
+  font-size: 1.2rem;
+
+  @media (max-width: 500px) {
+    display: none;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {

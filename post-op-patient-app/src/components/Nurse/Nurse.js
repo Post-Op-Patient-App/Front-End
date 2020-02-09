@@ -35,8 +35,8 @@ const toggle = tab => {
        </NavItem>
        <NavItem>
          <NavLink
-           className={classnames({ active: activeTab === '2' })}
-           onClick={() => { toggle('2'); }}
+           className={classnames({ active: activeTab === '3' })}
+           onClick={() => { toggle('3'); }}
          >
            Update Patient
          </NavLink>
