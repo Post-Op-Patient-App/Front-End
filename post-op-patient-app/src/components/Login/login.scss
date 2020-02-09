@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+
+.home {
+}
+
+.card-height {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80%;
+  height: 400px;
+
+  @media (min-width: 1000px) {
+    width: 40%;
+  }
+
+  .login-text {
+    font-family: 'Merriweather', serif;
+  }
+}
+
+.login-btn {
+  width: 75%;
+}
